@@ -1,0 +1,51 @@
+{
+  "config": {
+    "paths": {
+      "source": "assets/",
+      "dist": "dist/"
+    },
+    "browserSync": {
+      "mode": "proxy",
+      "watch": ["**/*.{php,html}"],
+      "devUrl": "http://shop.tuut.localhost/"
+    }
+  },
+  "resources": {
+    "scripts": {
+      "pattern": "*.js",
+      "directory": "scripts",
+      "assets": {
+        "main.js": {
+          "files": "index.js",
+          "autoload": "resources/assets/scripts/autoload/*.js"
+        }
+      }
+    },
+    "styles": {
+      "pattern": "*.{css,styl,scss,sass,less}",
+      "directory": "styles",
+      "assets": {
+        "main.css": {
+          "files": "index.styl",
+          "autoload": "resources/assets/styles/autoload/*.css"
+        },
+        "editor.css": "wordpress/editor.styl",
+        "dashboard-login.css": "wordpress/dashboard-login/index.styl"
+      }
+    },
+    "fonts": {
+      "pattern": "*.{eot,otf,svg,ttc,ttf,woff,woff2}",
+      "directory": "fonts",
+      "assets": {
+        "./": "**/*"
+      }
+    },
+    "images": {
+      "pattern": "*.{jpg,png,gif,svg}",
+      "directory": "images",
+      "assets": {
+        "./": "**/*"
+      }
+    }
+  }
+}

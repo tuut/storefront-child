@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<ruleset>
+  <!-- Scan these files -->
+  <file>app</file>
+  <file>functions.php</file>
+
+  <!-- Show colors in console -->
+  <arg value="-colors"/>
+
+  <!-- Show sniff codes in all reports -->
+  <arg value="s"/>
+
+  <!-- Use WordPress as a base -->
+  <rule ref="PSR2"/>
+
+  <!-- Allow side effects and symbols in app/files.php -->
+  <rule ref="PSR1.Files.SideEffects.FoundWithSymbols">
+    <exclude-pattern>app/*</exclude-pattern>
+  </rule>
+</ruleset>
